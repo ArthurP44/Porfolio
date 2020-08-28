@@ -11,8 +11,8 @@ function App() {
       <>
         <GlobalStyles />
         <div>
-          <h1>Hello. This is burger menu tutorial</h1>
-          <img src="https://media.giphy.com/media/xTiTnwj1LUAw0RAfiU/giphy.gif" alt="animated burger" />
+          <h1>Hello, welcome to my Portfolio</h1>
+          <img src="https://media.giphy.com/media/PiQejEf31116URju4V/giphy.gif" alt="animated burger" />
         </div>
         <div>
           <Burger open={open} setOpen={setOpen} />
