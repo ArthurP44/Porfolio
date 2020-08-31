@@ -10,11 +10,11 @@ return (
         À propos de moi
         </a>
         <a href="/">
-        <span role="img" aria-label="price">&#128187;</span>
+        <span role="img" aria-label="price"> &#128187;</span>
         Projets
         </a>
         <a href="/">
-        <span role="img" aria-label="contact">&#x1f4e9;</span>
+        <span role="img" aria-label="contact"> &#x1f4e9;</span>
         Contact
         </a>
     </StyledMenu>
