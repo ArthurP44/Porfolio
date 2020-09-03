@@ -1,6 +1,5 @@
 import React, { useState, useRef } from 'react';
 import { ThemeProvider } from 'styled-components';
-import styled from 'styled-components';
 import { GlobalStyles } from './global';
 import { theme } from './theme';
 import { Burger, Menu } from './components';

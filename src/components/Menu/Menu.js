@@ -6,6 +6,10 @@ import { Link }from "react-router-dom";
 const Menu = ({open}) => {
 return (
     <StyledMenu open={open}>
+        <Link to='/'>
+            <span role="img" aria-label="home">&#127968;</span>
+            Home
+        </Link>
         <Link to='/about'>
             <span role="img" aria-label="about us">&#x1f481;&#x1f3fb;&#x200d;&#x2642;&#xfe0f;</span>
             About Me
