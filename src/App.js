@@ -9,6 +9,7 @@ import { WelcomeSection } from './components/welcome';
 import { AboutMeSection } from './components/aboutMe';
 import { ProjectsSection } from './components/projects';
 import { ContactSection } from './components/contact';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 
 function App() {
@@ -19,26 +20,21 @@ function App() {
     <ThemeProvider theme={theme}>
       <>
         <GlobalStyles />
-        <div ref={node}>
-          <Burger open={open} setOpen={setOpen} />
-          <Menu open={open} setOpen={setOpen} />
-        </div>
-        <SectionLayout>
-          <WelcomeSection/>
-          <AboutMeSection/>
-          <ProjectsSection/>
-          <ContactSection/>
-        </SectionLayout>
+        <Router>
+          <div ref={node}>
+            <Burger open={open} setOpen={setOpen} />
+            <Menu open={open} setOpen={setOpen} />
+          </div>
+            <Switch>
+              <Route path="/" exact component={WelcomeSection} />
+              <Route path="/about" component={AboutMeSection} />
+              <Route path="/projects" component={ProjectsSection} />
+              <Route path="/contact" component={ContactSection} />
+            </Switch>
+        </Router>
       </>
     </ThemeProvider>
   );
 }
-
-const SectionLayout = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 100%;
-`
 
 export default App;
