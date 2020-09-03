@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react';
+import styled from 'styled-components';
 import { ThemeProvider } from 'styled-components';
 import { GlobalStyles } from './global';
 import { theme } from './theme';
@@ -8,7 +9,7 @@ import { WelcomeSection } from './components/welcome';
 import { AboutMeSection } from './components/aboutMe';
 import { ProjectsSection } from './components/projects';
 import { ContactSection } from './components/contact';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 
 function App() {
@@ -22,14 +23,12 @@ function App() {
         <Router>
           <div ref={node}>
             <Burger open={open} setOpen={setOpen} />
-            <Menu open={open} setOpen={setOpen} />
+            <Menu open={open} onClose={() => setOpen(false)} />
           </div>
-            <Switch>
               <Route path="/" exact component={WelcomeSection} />
               <Route path="/about" component={AboutMeSection} />
               <Route path="/projects" component={ProjectsSection} />
               <Route path="/contact" component={ContactSection} />
-            </Switch>
         </Router>
       </>
     </ThemeProvider>
