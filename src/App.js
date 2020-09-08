@@ -6,7 +6,7 @@ import { Burger, Menu } from './components';
 import { useOnClickOutside } from './hooks';
 import { WelcomeSection } from './components/welcome';
 import { AboutMeSection } from './components/AboutMe/aboutMe';
-import { ProjectsSection } from './components/projects';
+import { ProjectsSection } from './components/Projects/projects';
 import { ContactSection } from './components/contact';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
