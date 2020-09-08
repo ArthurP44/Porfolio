@@ -1,8 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-import picture from './profile-pic.jpg';
+import picture from '../Images/profile-pic.jpg';
+import TechLogos from './aboutMeTechLogos';
 
 export const AboutMeSection = () => {
+
     return (
         <WrapperAboutMeSection>
             <AboutMeLayout>
@@ -21,9 +23,7 @@ export const AboutMeSection = () => {
                     <button>see my resume online</button>
                     <button>download my resume</button>
                 </Resume>
-            </AboutMeLayout>
-            <AboutMeLayout>
-                <Techs>Ici les logos</Techs>
+                <TechLogos/>
             </AboutMeLayout>
         </WrapperAboutMeSection>
     )
@@ -32,7 +32,7 @@ export const AboutMeSection = () => {
 const WrapperAboutMeSection = styled.div`
     min-height: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     @media screen and (max-width: 800px){
         padding-top: 80px;
@@ -55,6 +55,7 @@ const AboutMeLayout = styled.div`
         margin: 15px 0;
     };
 `
+
 const Infos = styled.div`
     margin: 0;
     padding: 0px;
@@ -71,13 +72,6 @@ const Resume = styled.div`
     margin: 0;
     padding: 15px;
     background-color:red;
-    border-radius: 15px;
-
-`
-const Techs = styled.div`
-    margin: 0;
-    padding: 15px;
-    background-color: yellow;
     border-radius: 15px;
 
 `

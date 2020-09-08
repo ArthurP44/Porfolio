@@ -15,8 +15,10 @@ export const WelcomeSection = () => {
         }    
     
 const WelcomeLayout = styled.div`
+    min-height: 100%;
     display:flex;
     justify-content: center;
+    align-items: center;
     margin: 0;
     padding: 0;
     color: ${({ theme }) => theme.primaryLight};
