@@ -1,26 +1,22 @@
 import React from 'react';
 import styled from 'styled-components';
-import php_logo from '../Images/logo-php.png';
-import js_logo from '../Images/js.png';
-import symfony_logo from '../Images/symfony.png';
-import react_logo from '../Images/react.png';
 
 const techLogos = [
     {
         label: 'php',
-        path: php_logo,
+        name: 'logo-php.png',
     },
     {
         label: 'symfony',
-        path: symfony_logo,
+        name: 'symfony.png',
     },
     {
         label: 'javascript',
-        path: js_logo,
+        name: 'js.png',
     },
     {
         label: 'react',
-        path: react_logo,
+        name: 'react.png',
     }
 ];
 
@@ -31,7 +27,7 @@ export const TechLogos = () => {
             {techLogos.map((logo) => {
                     return (
                     <Test>
-                        <img src={logo.path} alt={logo.label}></img>
+                        <img src={require(`assets/logos/${logo.name}`)} alt={logo.label}></img>
                     </Test>
                     )
                 }
